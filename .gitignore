@@ -1,0 +1,10 @@
+*.ini
+__pycache__
+*.log
+run*.bat
+main*.py
+.vscode
+tmp
+scripts
+config.yaml
+geckodriver.log
