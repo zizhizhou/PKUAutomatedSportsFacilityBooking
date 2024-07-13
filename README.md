@@ -1,6 +1,6 @@
 # 智慧场馆自动预约工具
 
-![GitHub license](https://img.shields.io/badge/License-AGPL3.0-blue?style=for-the-badge)
+![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)
 
 
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue?style=for-the-badge)
