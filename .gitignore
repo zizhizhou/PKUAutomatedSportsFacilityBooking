@@ -1,7 +1,0 @@
-/__pycache__
-*.log
-/vscode
-/tmp
-/scripts
-./config.yaml
-geckodriver.log
