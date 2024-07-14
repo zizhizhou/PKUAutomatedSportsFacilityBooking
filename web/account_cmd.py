@@ -89,15 +89,7 @@ class Account_Cmd():
         send_text = "\n".join(string_list)
         self.WX.send_msg(title=msg_title,text=send_text,user_id=user_id)
     def help_personal_info(self,  user_id,param_dict,response_code):
-            self.WX.send_msg(title="添加个人信息指令为：\n/Add_Personal_Info --Account=<account> --Password=<password> --Phone=<phone> [--Pay={0|1|2|3}]\n\
-其中参数account为IAAA登录账号；password为IAAA登录密码；phone为电话号码；参数Pay为可选，值为0~3，默认为0，0代表不自动支付：预约成功后需自行至智慧场馆中登录；\
-1为校园卡自动支付：预约成功后会使用校园卡自动支付；2为微信支付：预约成功后会发送微信付款二维码；3为支付宝支付：预约成功后会发送支付宝付款二维码。\n\
-如果需要预约的账号为“12345678”，密码为“12345abcde”，手机号为：“18866669999”，选择支付方式为“校园卡自动支付”，则应输入指令：\n\
-/Add_Personal_Info --Account=12345678 --Password=12345abcde --Phone=18866669999 --Pay=1\n\
- 注销个人信息指令为：\n/Delete_Personal_Info\n\
-查询个人信息指令为：\n/Edit_Personal_Info [--Account=<account>] [--Password=<password>] [--Phone=<phone>] [--Pay={0|1|2|3}]\n根据需要选择参数进行修改，没有参数则为查询个人信息\n\
-个人信息帮助指令为：\n/Help_Personal_Info\n\
-请按照格式输入指令", user_id=user_id)
+            self.WX.send_msg(title="请参阅：https://github.com/zizhizhou/PKUAutomatedSportsFacilityBooking/blob/main/README.md#21%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86", user_id=user_id)
 
     def add_personal_info(self,  user_id,param_dict,response_code):
         if Account_Cmd.check_account(user_id):
@@ -105,11 +97,7 @@ class Account_Cmd():
             return
         if len(param_dict)==0:
             self.WX.send_msg(title="添加个人信息之前，您应当点击“其他-隐私政策”阅读并知晓可能的隐私风险，\n\
-指令为\n/Add_Personal_Info --Account=<account> --Password=<password> --Phone=<phone> [--Pay={0|1|2|3}]\n\
-其中account为IAAA登录账号，password为IAAA登录密码，phone为电话号码，参数Pay为可选，值为0~3，默认为0，0代表不自动支付：预约成功后需自行至智慧场馆中登录；\
-1为校园卡自动支付：预约成功后会使用校园卡自动支付；2为微信支付：预约成功后会发送微信付款二维码；3为支付宝支付：预约成功后会发送支付宝付款二维码。\n\
-如果需要预约的账号为“12345678”，密码为“12345abcde”，手机号为：“18866669999”，选择支付方式为“校园卡自动支付”，则应输入指令：\n\
-/Add_Personal_Info --Account=12345678 --Password=12345abcde --Phone=18866669999 --Pay=1\n请按照格式输入指令", user_id=user_id)
+请参阅：https://github.com/zizhizhou/PKUAutomatedSportsFacilityBooking/blob/main/README.md#211%E6%B7%BB%E5%8A%A0%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF", user_id=user_id)
         else:
             # 加密ACCOUNT和PASSWORD
             encrypted_account = RsaHelper.encrypt_message(RsaHelper._public_key, param_dict["Account"])

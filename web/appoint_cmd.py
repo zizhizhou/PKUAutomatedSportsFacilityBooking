@@ -63,16 +63,7 @@ class Appoint_Cmd():
         self.WX.send_msg(title="【查看预约】 ",text=send_text,user_id=user_id)
 
     def help_appoint(self,  user_id,param_dict,response_code):
-            self.WX.send_msg(title="添加预约指令为：\n/Add_Appoint {--Week=[1~7]|Date=<date>} --Gym={0|1} --Field={[1~12]|[1~9]} --Time={[06:50~22:00]|[8:00~22:00]} [--Status={0|1}]\n\
-其中参数Week为周几（列表），Date为具体日期（年-月-日）；Gym为场馆，0为邱德拔体育馆羽毛球场，1为五四体育中心羽毛球馆；\
-Field为场地编号列表，根据场馆不同范围不同，邱德拔为1~12，五四为1~9，预约时按列表顺位进行场地预约；Time为需要预约场地的开始时间列表，根据场馆不同范围不同，具体可登录智慧场馆自行查看，每人每天最多两个时段；\
-Status为可选项，为0或1，默认为1，1代表启用该预约信息，0代表不启用。\n\
-如果需要预约周三和周四的场地，场馆为邱德拔体育馆羽毛球场，场地顺序为3、4、9、10，时间为20：00-21：00、21：00-22：00，预约状态为启用，则应输入指令：\n\
-/Add_Appoint --Week=[3,4] --Gym=0 --Field=[3,4,6,9] --Time=[21:00,22:00] --Status=1\n\
-查询预约指令为：\n/View_Appoint\n查询所有预约信息，每条预约信息签会附带对应预约信息ID。\n\
-编辑预约指令为：\n/Edit_Appoint [--ID=<id>] [--Gym={0|1}] [--Field={[1~12]|[1~9]}] [--Time={[06:50~22:00]|[8:00~22:00]}] [--Status={0|1}]\n\
-帮助预约指令为：\n/Help_Appoint\n\
-请按照格式输入指令", user_id=user_id)
+            self.WX.send_msg(title="请参阅：https://github.com/zizhizhou/PKUAutomatedSportsFacilityBooking/blob/main/README.md#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B", user_id=user_id)
             
     def week_appoint(self,user_id,param_dict,response_code):
         if not Account_Cmd.check_account(user_id):
