@@ -1,0 +1,43 @@
+setting:
+# ; browser:使用的浏览器，port: 端口
+ browser: firefox
+ port: 33000
+
+
+
+time:
+# ; start_time表示开始抢场地时间，默认为11:59:55，在这个时间start_time前一分钟会先登录等待
+# ; finish_time表示结束时间
+# ; 在start_time与finish_time之间会尝试进行抢场地操作，如果操作失败，会一直刷新页面
+# ; delay_day表示抢几天之后的场地
+
+  execute_start_time: 11:59:55
+  execute_finish_time: 22:00:05
+  delay_day: 3
+
+
+#;===================================
+
+wechat:
+
+#; wechat_notice：是否开启微信通知
+#; True/False，1/0，yes/no
+  wechat_notice: True
+  
+  rsa_encrypt: True
+  local_sql: False
+
+#; TOKEN; 企业ID，应用ID
+  TOKEN: iSy2cnpPCIWPp
+
+  CORP_ID: wwc9186b32add6e6cd
+  AGENT_ID: "1000004"
+  CORP_SERECT: a4f-bXW7GWwkcJ1W6GZnitbcgnWHVd_DtPeKrcvc2qA
+  PROXY: http://123.57.255.210:33000
+  EncodingAESKey: wmQogqHyhVVpIVbDkLgTGbxnewDI4qTzBLtQwbPm4Tf
+
+operate:
+# ; mode:抢场地模式：0为单进程抢，会选择所有场地一起提交；
+# ;1为多进程抢所需场地，比如需要两个时间段就会有两个进程；
+# ;2为多进程抢所有场地，会使用多个进程抢所需时段场地，比如需要2个时段，10片场地备选，就会有2*10=20个进程同时抢
+  mode: 0

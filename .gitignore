@@ -1,10 +1,7 @@
-*.ini
-__pycache__
+/__pycache__
 *.log
-run*.bat
-main*.py
-.vscode
-tmp
-scripts
-config.yaml
+/vscode
+/tmp
+/scripts
+./config.yaml
 geckodriver.log
