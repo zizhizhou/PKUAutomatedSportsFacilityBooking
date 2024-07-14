@@ -19,8 +19,8 @@ class Other_Cmd():
         pass
 
     def help(self,user_id,param_dict,response_code):
-        string="欢迎使用智慧场馆预约助手，本应用尚在开发中，不能保证稳定运行，本应用可以按照您的设置帮助您在智慧场馆系统中自动预定场地（暂只支持羽毛球场），以下是使用方法介绍：\n \n\
-1 概述\n 由于企业微信限制，本应用在微信和企业微信APP上功能略有不同，微信APP上只可通过输入指令进行交互，具体交互指令请点击对应菜单的帮助获得；\
+        string="欢迎使用智慧场馆预约助手，本应用尚在开发中，不能保证稳定运行，本应用可以按照您的设置帮助您在智慧场馆系统中自动预定场地（暂只支持羽毛球场）。\n\
+\n 由于企业微信限制，本应用在微信和企业微信APP上功能略有不同，微信APP上只可通过输入指令进行交互，具体交互指令请点击对应菜单的帮助获得；\
 企业微信APP部分功能还可通过企业微信提供的模板卡片进行交互，具体请参阅：https://github.com/zizhizhou/PKUAutomatedSportsFacilityBooking/blob/main/README.md"
 
 

@@ -63,7 +63,7 @@ class Appoint_Cmd():
         self.WX.send_msg(title="【查看预约】 ",text=send_text,user_id=user_id)
 
     def help_appoint(self,  user_id,param_dict,response_code):
-            self.WX.send_msg(title="请参阅：https://github.com/zizhizhou/PKUAutomatedSportsFacilityBooking/blob/main/README.md#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B", user_id=user_id)
+            self.WX.send_msg(title="请参阅：https://github.com/zizhizhou/PKUAutomatedSportsFacilityBooking/blob/main/README.md#22%E9%A2%84%E7%BA%A6%E7%AE%A1%E7%90%86", user_id=user_id)
             
     def week_appoint(self,user_id,param_dict,response_code):
         if not Account_Cmd.check_account(user_id):
